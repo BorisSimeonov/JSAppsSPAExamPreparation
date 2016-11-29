@@ -15,10 +15,10 @@ export default class NavigationBar extends React.Component {
         } else {
             return (
                 <div className="navigation-bar">
-                    <a href="#">Home</a>
-                    <a href="#">Books</a>
-                    <a href="#">CreateBook</a>
-                    <a href="#">Logout</a>
+                    <a href="#" onClick={this.props.homeClicked}>Home</a>
+                    <a href="#" onClick={this.props.booksClicked}>Books</a>
+                    <a href="#" onClick={this.props.createBookClicked}>CreateBook</a>
+                    <a href="#" onClick={this.props.logoutClicked}>Logout</a>
                 </div>
             )
         }
