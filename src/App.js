@@ -85,9 +85,7 @@ export default class App extends React.Component {
     }
 
     showHomeView() {
-        this.showView(<HomeView
-            username={this.state.username}
-        />);
+        this.showView(<HomeView username={this.state.username}/>);
     }
 
     showLoginView() {
@@ -107,6 +105,8 @@ export default class App extends React.Component {
     }
 
     logout() {
-        //TODO: change and implement logout
+        this.setState({
+            username: null
+        });
     }
 }

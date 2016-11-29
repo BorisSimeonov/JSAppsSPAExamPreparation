@@ -5,7 +5,7 @@ import './RegisterView.css';
 export default class RegisterView extends React.Component {
     render() {
         return (
-            <form className="register-form" onSubmit={{/*this.submitForm.bind(this)*/}}>
+            <form className="register-form" onSubmit={this.submitForm.bind(this)}>
                 <h1>Register</h1>
                 <label>
                     <div>Username:</div>
@@ -22,5 +22,9 @@ export default class RegisterView extends React.Component {
                 </div>
             </form>
         )
+    }
+
+    submitForm() {
+
     }
 }

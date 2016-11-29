@@ -5,7 +5,7 @@ import './LoginView.css';
 export default class LoginView extends React.Component {
     render() {
         return (
-            <form className="login-form" onSubmit={{/*this.submitForm.bind(this)*/}}>
+            <form className="login-form" onSubmit={this.submitForm.bind(this)}>
                 <h1>Login</h1>
                 <label>
                     <div>Username:</div>
@@ -22,5 +22,9 @@ export default class LoginView extends React.Component {
                 </div>
             </form>
         )
+    }
+
+    submitForm() {
+
     }
 }

@@ -19,6 +19,9 @@ export default class NavigationBar extends React.Component {
                     <a href="#" onClick={this.props.booksClicked}>Books</a>
                     <a href="#" onClick={this.props.createBookClicked}>CreateBook</a>
                     <a href="#" onClick={this.props.logoutClicked}>Logout</a>
+                    <span className="loggedInUser">
+                        Welcome, {this.props.username}
+                    </span>
                 </div>
             )
         }
