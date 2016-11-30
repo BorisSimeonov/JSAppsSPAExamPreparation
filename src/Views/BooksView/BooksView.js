@@ -30,9 +30,15 @@ export default class BooksView extends React.Component {
     }
 
     getBookActions(book) {
-        return <div>
-            <button onClick={this.props.onedit.bind(this, book._id)}>Edit</button>
-            <button onClick={this.props.ondelete.bind(this, book._id)}>Delete</button>
-        </div>
+        if(book._acl.creator === sessionStorage.getItem('userId')) {
+            return <div>
+                <button onClick={this.props.onedit.bind(this, book)}>Edit</button>
+                <button onClick={this.props.ondelete.bind(this, book._id)}>Delete</button>
+            </div>
+        } else {
+            return <div>
+                No actions.
+            </div>
+        }
     }
 }

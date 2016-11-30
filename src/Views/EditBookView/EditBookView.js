@@ -7,17 +7,17 @@ export default class EditBookView extends React.Component {
                 <h1>Create Book</h1>
                 <label>
                     <div>Title</div>
-                    <input type="text" name="title" required
+                    <input type="text" name="title" defaultValue={this.props.bookInstance.title} required
                            ref={e => this.titleField = e}/>
                 </label>
                 <label>
                     <div>Author</div>
-                    <input type="text" name="author" required
+                    <input type="text" name="author" defaultValue={this.props.bookInstance.author} required
                            ref={e => this.authorField = e}/>
                 </label>
                 <label>
                     <div>Description</div>
-                    <textarea type="text" name="description"
+                    <textarea type="text" name="description" defaultValue={this.props.bookInstance.description}
                            ref={e => this.descriptionField = e}/>
                 </label>
                 <div>

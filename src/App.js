@@ -142,9 +142,9 @@ export default class App extends React.Component {
         this.showView(<CreateBookView onsubmit={this.createBook.bind(this)}/>);
     }
 
-    showEditBookView(bookId) {
-        this.showView(<EditBookView
-            onsubmit={this.editBook.bind(this, bookId)}/>);
+    showEditBookView(book) {
+        this.showView(<EditBookView bookInstance={book}
+            onsubmit={this.editBook.bind(this, book._id)}/>);
     }
 
     createBook(title, author, description) {
