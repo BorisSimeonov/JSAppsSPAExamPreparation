@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './RegisterView.css';
-
 export default class RegisterView extends React.Component {
     render() {
         return (
@@ -24,7 +22,11 @@ export default class RegisterView extends React.Component {
         )
     }
 
-    submitForm() {
-
+    submitForm(event) {
+        event.preventDefault();
+        this.props.onsubmit(
+            this.usernameField.value,
+            this.passwordField.value
+        )
     }
 }

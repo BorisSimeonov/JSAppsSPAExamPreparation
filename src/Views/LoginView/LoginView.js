@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './LoginView.css';
-
 export default class LoginView extends React.Component {
     render() {
         return (
@@ -24,7 +22,11 @@ export default class LoginView extends React.Component {
         )
     }
 
-    submitForm() {
-
+    submitForm(event) {
+        event.preventDefault();
+        this.props.onsubmit(
+            this.usernameField.value,
+            this.passwordField.value
+        )
     }
 }

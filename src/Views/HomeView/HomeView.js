@@ -1,7 +1,5 @@
 import React from 'react';
 
-import './HomeView.css';
-
 export default class HomeView extends React.Component {
     render() {
         return (

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class CreateBookView extends React.Component {
+export default class EditBookView extends React.Component {
     render() {
         return (
             <form className="create-book-form" onSubmit={this.submitForm.bind(this)}>
@@ -21,7 +21,7 @@ export default class CreateBookView extends React.Component {
                            ref={e => this.descriptionField = e}/>
                 </label>
                 <div>
-                    <input type="submit" value="CreateBook"/>
+                    <input type="submit" value="EditBook"/>
                 </div>
             </form>
         )
